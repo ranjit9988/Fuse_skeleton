@@ -1,0 +1,12 @@
+@import "src/@fuse/scss/fuse";
+
+.ng-star-inserted{
+    .mat-card.example-card {
+    max-width: 400px;
+  }
+  
+  .mat-card.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+}
