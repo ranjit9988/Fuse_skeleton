@@ -2,6 +2,37 @@
     margin-top:15px;
 }
 
-.example-card{
-    cursor: pointer;
+.createIcon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    /* margin-top: auto; */
+    margin-bottom: 1%;
+}
+
+.configureDiv{
+    color: #676767;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 17px;
+    text-align: left;
+    margin: 30px 0 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+h1{
+    color: #676767;
+    /* font-size: 20px; */
+    font-weight: 700;
+    text-align: center;
+    margin: auto auto 8px;
+    width: 100%;
+    place-content: stretch center;
+    align-items: stretch;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 36px;
 }

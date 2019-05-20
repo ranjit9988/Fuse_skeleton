@@ -19,17 +19,24 @@ import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 import { SampleModule } from 'app/main/sample/sample.module';
 import { ConciergeModule } from 'app/main/concierge/concierge.module';
+import { IntegrationsModule} from 'app/main/integrations/integrations.module';
+import { AccountSetupModule } from 'app/main/account-setup/account-setup.module';
+
+
 
 const appRoutes: Routes = [
     {
         path      : '**',
         redirectTo: 'sample'
     },
+
+
 ];
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+    
     ],
     imports     : [
         BrowserModule,
@@ -57,7 +64,9 @@ const appRoutes: Routes = [
         // App modules
         LayoutModule,
         SampleModule,
-        ConciergeModule
+        ConciergeModule,
+        IntegrationsModule,
+        AccountSetupModule,
     ],
     bootstrap   : [
         AppComponent

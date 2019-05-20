@@ -1,37 +1,47 @@
-<div class="page-layout blank p-24" fusePerfectScrollbar>
+<div class="page-layout blank p-24" fusePerfectScrollbar >
   <h1 fxLayoutAlign="center">Let's Build Something Great.</h1>
-  <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="8.5%" fxLayoutAlign="center">
-    <div fxFlex="45%">
-      <mat-card class="example-card p-33">
+  <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%" fxLayoutAlign="center">
+    <div fxFlex="50%">
+      <mat-card class="example-card p-33" style="background: #54a4f3;">
+            <img mat-card-image src="/assets/images/concierge/create.jpg" >
         <mat-card-content>
-          <h3 fxLayoutAlign="center">
+          <h2 fxLayoutAlign="center" style="color: white">
             Create Project
-          </h3>
+          </h2>
+          <h4 fxLayoutAlign="center" style="color: white">Drill right in and create a project.</h4>
         </mat-card-content>
       </mat-card>
     </div>
 
-
-    <div fxFlex="45%">
-      <mat-card class="example-card" routerLink = "sample">
-        <mat-card-content >
-          <h3 fxLayoutAlign="center">
+    
+    <div fxFlex="50%">
+      <mat-card class="example-card">
+            <img mat-card-image src="/assets/images/concierge/eye.png">
+        <mat-card-content>
+          <h2 fxLayoutAlign="center">
             View Sample Project
-          </h3>
+          </h2>
+          <h4 fxLayoutAlign="center">We created a sample project for you to explore.</h4>
         </mat-card-content>
       </mat-card>
     </div>
 
   </div>
+  <h2 class="configureDiv">
+        configure
+ </h2>
 
-  <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
-    <div fxFlex="33%">
-      <mat-card class="example-card">
+
+  <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%" fxLayoutAlign="center">
+    <div fxFlex="25%">
+      <mat-card class="example-card" routerLink = "/AccountSetup">
+            <img mat-card-image src="/assets/images/concierge/account_setup.jpg">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
+          
           <mat-card-title><h2>Account Setup</h2></mat-card-title>
         </mat-card-header>
-        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+        
         <mat-card-content>
             <!-- <mat-list role="list" >
                <mat-list-item role="listitem"><mat-icon>label_important</mat-icon>Verify your company information</mat-list-item>
@@ -44,8 +54,9 @@
     </div>
 
 
-    <div fxFlex="33%">
-      <mat-card class="example-card">
+    <div fxFlex="25%">
+      <mat-card class="example-card" routerLink = "/AccountSetup">
+            <img mat-card-image src="/assets/images/concierge/Upload_directory5.png">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title><h2>Upload Directory</h2></mat-card-title>
@@ -57,8 +68,9 @@
       </mat-card>
     </div>
 
-    <div fxFlex="33%">
-      <mat-card class="example-card">
+    <div fxFlex="25%">
+      <mat-card class="example-card" routerLink = "/Integrations" >
+            <img mat-card-image src="/assets/images/concierge/cost_codes2.png">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title><h2>Customize Cost Codes</h2></mat-card-title>
@@ -69,6 +81,19 @@
         </mat-card-content>
       </mat-card>
     </div>
+
+    <div fxFlex="25%">
+            <mat-card class="example-card"  routerLink = "/Integrations" >
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title><h2>Integrations</h2></mat-card-title>
+              </mat-card-header>
+              <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+              <mat-card-content>
+                    <ul class="style_summary__cSD-e"><li>Browse featured integrations from the Procore Marketplace</li><li>Get access to the integrations you need</li></ul>
+                </mat-card-content>
+            </mat-card>
+          </div>
   </div>
 
 </div>

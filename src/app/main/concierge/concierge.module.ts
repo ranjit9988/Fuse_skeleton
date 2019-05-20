@@ -3,14 +3,17 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { ConciergeComponent } from './concierge.component';
+
 import { MatCardModule, MatIconModule } from '@angular/material';
 import {MatListModule} from '@angular/material/list';
 
 const routes = [
   {
     path: 'Concierge',
-    component: ConciergeComponent
+    component: ConciergeComponent,
+ 
   }
+
 ];
 
 
@@ -21,13 +24,13 @@ const routes = [
     FuseSharedModule,
     MatCardModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
   ],
 
   declarations: [ConciergeComponent],
 
   exports: [
-    ConciergeComponent
+    ConciergeComponent,
   ]
 })
 export class ConciergeModule { }
