@@ -1,146 +1,240 @@
-<div class="page-layout blank p-24" fusePerfectScrollbar >
-<div class="horizontal-stepper-wrapper">
+<div class="page-layout blank p-24" fusePerfectScrollbar>
+    <div class="horizontal-stepper-wrapper">
 
-  <!-- HORIZONTAL STEPPER EXAMPLE -->
-  <mat-horizontal-stepper class="mat-elevation-z4" [linear]="true">
+        <!-- HORIZONTAL STEPPER EXAMPLE -->
+        <mat-horizontal-stepper class="mat-elevation-z4" [linear]="true">
 
-      <mat-step [stepControl]="horizontalStepperStep1">
+            <mat-step [stepControl]="horizontalStepperStep1">
+             <div  fxLayoutAlign="center center">
+                <form [formGroup]="horizontalStepperStep1">
 
-          <form [formGroup]="horizontalStepperStep1">
+                    <ng-template matStepLabel>Add your Profile Details</ng-template>
 
-              <ng-template matStepLabel>Fill out your name</ng-template>
+                    <div  class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px"  fxLayoutAlign="center">
+                            <div class="input-row" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" >
+                        <mat-form-field fxFlex="100%">
+                            <input matInput placeholder="First name" formControlName="firstName" required>
+                            <mat-error *ngIf="horizontalStepperStep1Errors.firstName.required">
+                                First Name is required!
+                            </mat-error>
+                        </mat-form-field>
 
-              <div fxFlex="1 0 auto" fxLayout="row">
+                        <mat-form-field fxFlex="100%">
+                            <input matInput placeholder="Last name" formControlName="lastName" required>
+                            <mat-error *ngIf="horizontalStepperStep1Errors.lastName.required">
+                                Last Name is required!
+                            </mat-error>
+                        </mat-form-field>
+                            </div>
 
-                  <mat-form-field fxFlex="50">
-                      <input matInput placeholder="First name" formControlName="firstName" required>
-                      <mat-error *ngIf="horizontalStepperStep1Errors.firstName.required">
-                          First Name is required!
-                      </mat-error>
-                  </mat-form-field>
+                        <mat-form-field fxFlex="100%">
+                            <input matInput placeholder="Job Title" formControlName="jobtitle" required>
+                            <mat-error *ngIf="horizontalStepperStep1Errors.jobtitle.required">
+                                Job Title is required!
+                            </mat-error>
+                        </mat-form-field>
 
-                  <mat-form-field fxFlex="50">
-                      <input matInput placeholder="Last name" formControlName="lastName" required>
-                      <mat-error *ngIf="horizontalStepperStep1Errors.lastName.required">
-                          Last Name is required!
-                      </mat-error>
-                  </mat-form-field>
+                        <mat-form-field fxFlex="100%">
+                            <input matInput placeholder="Email Address" formControlName="email" required>
+                            <mat-error *ngIf="horizontalStepperStep1Errors.email.required">
+                                Email Addressis required!
+                            </mat-error>
+                        </mat-form-field>
 
-              </div>
+                        <mat-form-field fxFlex="100%">
+                            <input matInput placeholder="Mobile Number" formControlName="mobile" required>
+                            <mat-error *ngIf="horizontalStepperStep1Errors.mobile.required">
+                                Mobile Number is required!
+                            </mat-error>
+                        </mat-form-field>
 
-              <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
-                  <button mat-raised-button matStepperNext type="button" color="accent">
-                      Next
-                  </button>
-              </div>
+                    </div>
 
-          </form>
 
-      </mat-step>
 
-      <mat-step [stepControl]="horizontalStepperStep2">
 
-          <form [formGroup]="horizontalStepperStep2">
+                    <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                        <button mat-raised-button matStepperNext type="button" color="accent">
+                            Next
+                        </button>
+                    </div>
 
-              <ng-template matStepLabel>Fill out your address</ng-template>
+                </form>
+            </div>
+            </mat-step>
 
-              <div fxFlex="1 0 auto" fxLayout="row">
+            <mat-step [stepControl]="horizontalStepperStep2">
 
-                  <mat-form-field fxFlex="100">
+                <form [formGroup]="horizontalStepperStep2">
+
+                    <ng-template matStepLabel>COMPANY DETAILS</ng-template>
+
+                    <div fxFlex="1 0 auto" fxLayout="column">
+                        <mat-form-field fxFlex="100">
+                            <input matInput placeholder="Company Name" formControlName="companyname" required>
+                            <mat-error *ngIf="horizontalStepperStep2Errors.companyname.required">
+                                Company Name is required!
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex="50">
+                            <input matInput placeholder="Company Type" formControlName="companytype" required>
+                            <mat-error *ngIf="horizontalStepperStep2Errors.companytype.required">
+                                Company Type is required!
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex="50">
+                            <input matInput placeholder="Services" formControlName="services" required>
+                            <mat-error *ngIf="horizontalStepperStep2Errors.services.required">
+                                Services is required!
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex="50">
+                            <input matInput placeholder="Business Phone" formControlName="businessphone" required>
+                            <mat-error *ngIf="horizontalStepperStep2Errors.businessphone.required">
+                                Business Phone is required!
+                            </mat-error>
+                        </mat-form-field>
+
+
+
+                        <!-- <mat-form-field fxFlex="100">
                       <textarea matInput placeholder="Address" formControlName="address" required>
                           1600 Amphitheatre Pkwy
                       </textarea>
                       <mat-error *ngIf="horizontalStepperStep2Errors.address.required">
                           Address is required!
                       </mat-error>
-                  </mat-form-field>
+                  </mat-form-field> -->
 
-              </div>
+                        <div fxFlex="1 0 auto" fxLayout="column">
+                            <ng-template matStepLabel>OFFICE DETAILS</ng-template>
 
-              <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
-                  <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
-                      Previous
-                  </button>
-                  <button mat-raised-button matStepperNext type="button" color="accent">
-                      Next
-                  </button>
-              </div>
+                            <mat-form-field fxFlex="100">
+                                <input matInput placeholder="Office Name" formControlName="officeName" required>
+                                <mat-error *ngIf="horizontalStepperStep2Errors.officeName.required">
+                                    Office Name is required!
+                                </mat-error>
+                            </mat-form-field>
 
-          </form>
+                            <mat-form-field fxFlex="100">
+                                <input matInput placeholder="Office Address" formControlName="officeAddress" required>
+                                <mat-error *ngIf="horizontalStepperStep2Errors.officeAddress.required">
+                                    Office Address is required!
+                                </mat-error>
+                            </mat-form-field>
 
-      </mat-step>
+                            <mat-form-field fxFlex="100">
+                                <input matInput placeholder="Office City" formControlName="officeCity" required>
+                                <mat-error *ngIf="horizontalStepperStep2Errors.officeCity.required">
+                                    Office City is required!
+                                </mat-error>
+                            </mat-form-field>
 
-      <mat-step [stepControl]="horizontalStepperStep3">
+                            <mat-form-field fxFlex="100">
+                                <input matInput placeholder="Office State" formControlName="officeState" required>
+                                <mat-error *ngIf="horizontalStepperStep2Errors.officeState.required">
+                                    Office State is required!
+                                </mat-error>
+                            </mat-form-field>
 
-          <form [formGroup]="horizontalStepperStep3">
+                            <mat-form-field fxFlex="100">
+                                <input matInput placeholder="Office ZIP Code" formControlName="officezipCode" required>
+                                <mat-error *ngIf="horizontalStepperStep2Errors.officezipCode.required">
+                                    Office ZIP Code is required!
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
 
-              <ng-template matStepLabel>Fill out your address</ng-template>
+                    </div>
 
-              <div fxFlex="1 0 auto" fxLayout="row">
+                    <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                        <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                            Previous
+                        </button>
+                        <button mat-raised-button matStepperNext type="button" color="accent">
+                            Next
+                        </button>
+                    </div>
 
-                  <mat-form-field fxFlex="33">
-                      <input matInput placeholder="City" formControlName="city" required>
-                      <mat-error *ngIf="horizontalStepperStep3Errors.city.required">
-                          City is required!
-                      </mat-error>
-                  </mat-form-field>
+                </form>
 
-                  <mat-form-field fxFlex="34">
-                      <input matInput placeholder="State" formControlName="state" required>
-                      <mat-error *ngIf="horizontalStepperStep3Errors.state.required">
-                          State is required!
-                      </mat-error>
-                  </mat-form-field>
+            </mat-step>
 
-                  <mat-form-field fxFlex="33">
-                      <input matInput #postalCode placeholder="Postal Code" formControlName="postalCode"
-                             required>
-                      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
-                      <mat-error *ngIf="horizontalStepperStep3Errors.postalCode.maxlength">
-                          Postal Code needs to be max.
-                          {{horizontalStepperStep3Errors.postalCode.maxlength.requiredLength}} characters
-                      </mat-error>
-                      <mat-error *ngIf="horizontalStepperStep3Errors.postalCode.required">
-                          Postal Code is required!
-                      </mat-error>
-                  </mat-form-field>
+            <mat-step [stepControl]="horizontalStepperStep3">
 
-              </div>
+                <form [formGroup]="horizontalStepperStep3">
 
-              <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
-                  <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
-                      Previous
-                  </button>
-                  <button mat-raised-button matStepperNext type="button" color="accent">
-                      Next
-                  </button>
-              </div>
+                    <ng-template matStepLabel>Add your Company Logo</ng-template>
 
-          </form>
+                    <div fxFlex="1 0 auto" fxLayout="row">
 
-      </mat-step>
+                        <mat-form-field fxFlex="33">
+                            <input matInput placeholder="City" formControlName="city" required>
+                            <mat-error *ngIf="horizontalStepperStep3Errors.city.required">
+                                City is required!
+                            </mat-error>
+                        </mat-form-field>
 
-      <mat-step>
+                        <mat-form-field fxFlex="34">
+                            <input matInput placeholder="State" formControlName="state" required>
+                            <mat-error *ngIf="horizontalStepperStep3Errors.state.required">
+                                State is required!
+                            </mat-error>
+                        </mat-form-field>
 
-          <ng-template matStepLabel>Done</ng-template>
+                        <mat-form-field fxFlex="33">
+                            <input matInput #postalCode placeholder="Postal Code" formControlName="postalCode" required>
+                            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                            <mat-error *ngIf="horizontalStepperStep3Errors.postalCode.maxlength">
+                                Postal Code needs to be max.
+                                {{horizontalStepperStep3Errors.postalCode.maxlength.requiredLength}} characters
+                            </mat-error>
+                            <mat-error *ngIf="horizontalStepperStep3Errors.postalCode.required">
+                                Postal Code is required!
+                            </mat-error>
+                        </mat-form-field>
 
-          <div class="h2 m-16" fxLayout="row" fxLayoutAlign="center center">
-              Thank your for filling out our form.
-          </div>
+                    </div>
 
-          <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
-              <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
-                  Previous
-              </button>
-              <button mat-raised-button type="button" color="accent" (click)="finishHorizontalStepper()">
-                  Finish
-              </button>
-          </div>
+                    <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                        <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                            Previous
+                        </button>
+                        <button mat-raised-button matStepperNext type="button" color="accent">
+                            Next
+                        </button>
+                    </div>
 
-      </mat-step>
+                </form>
 
-  </mat-horizontal-stepper>
-  <!-- / HORIZONTAL STEPPER EXAMPLE -->
+            </mat-step>
 
-</div>
+            
+
+            <mat-step>
+
+                <ng-template matStepLabel>Done</ng-template>
+
+                <div class="h2 m-16" fxLayout="row" fxLayoutAlign="center center">
+                    Thank your for filling out our form.
+                </div>
+
+                <div class="pt-24" fxLayout="row" fxLayoutAlign="center center">
+                    <button class="mr-8" mat-raised-button matStepperPrevious type="button" color="accent">
+                        Previous
+                    </button>
+                    <button mat-raised-button type="button" color="accent" (click)="finishHorizontalStepper()">
+                        Finish
+                    </button>
+                </div>
+
+            </mat-step>
+
+        </mat-horizontal-stepper>
+        <!-- / HORIZONTAL STEPPER EXAMPLE -->
+
+    </div>
 </div>

@@ -21,7 +21,8 @@ import { SampleModule } from 'app/main/sample/sample.module';
 import { ConciergeModule } from 'app/main/concierge/concierge.module';
 import { IntegrationsModule} from 'app/main/integrations/integrations.module';
 import { AccountSetupModule } from 'app/main/account-setup/account-setup.module';
-
+import { GetStartedModule} from 'app/main/get-started/get-started.module';
+import { UploadDirectoryHomeModule } from 'app/main/upload-directory-home/upload-directory-home.module';
 
 
 const appRoutes: Routes = [
@@ -67,6 +68,8 @@ const appRoutes: Routes = [
         ConciergeModule,
         IntegrationsModule,
         AccountSetupModule,
+        GetStartedModule,
+        UploadDirectoryHomeModule,
     ],
     bootstrap   : [
         AppComponent
