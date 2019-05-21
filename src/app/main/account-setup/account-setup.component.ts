@@ -36,10 +36,24 @@ export class AccountSetupComponent implements OnInit, OnDestroy
         this.horizontalStepperStep1Errors = {
             firstName: {},
             lastName : {},
+            jobtitle:{},
+            email:{},
+            mobile:{}
         };
 
         this.horizontalStepperStep2Errors = {
-            address: {}
+            companyname: {},
+            companytype: {},
+            services: {},
+            businessphone:{},
+
+            officeName:{},
+            officeAddress:{},
+            officeCity:{},
+            officeState:{},
+            officezipCode:{},
+
+
         };
 
         this.horizontalStepperStep3Errors = {
@@ -61,16 +75,28 @@ export class AccountSetupComponent implements OnInit, OnDestroy
      */
     ngOnInit(): void
     {
-       
-
         // Horizontal Stepper form steps
         this.horizontalStepperStep1 = this._formBuilder.group({
             firstName: ['', Validators.required],
-            lastName : ['', Validators.required]
+            lastName : ['', Validators.required],
+            jobtitle: ['', Validators.required],
+            email: ['', Validators.required],
+            mobile: ['', Validators.required],
         });
 
         this.horizontalStepperStep2 = this._formBuilder.group({
-            address: ['', Validators.required]
+            companyname:  ['', Validators.required],
+            companytype: ['', Validators.required],
+            services: ['', Validators.required],
+            businessphone: ['', Validators.required],
+
+            officeName:['', Validators.required],
+            officeAddress:['', Validators.required],
+            officeCity:['', Validators.required],
+            officeState:['', Validators.required],
+            officezipCode:['', Validators.required],
+
+
         });
 
         this.horizontalStepperStep3 = this._formBuilder.group({
