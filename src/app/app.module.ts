@@ -21,14 +21,13 @@ import { SampleModule } from 'app/main/sample/sample.module';
 import { ConciergeModule } from 'app/main/concierge/concierge.module';
 import { IntegrationsModule} from 'app/main/integrations/integrations.module';
 import { AccountSetupModule } from 'app/main/account-setup/account-setup.module';
-<<<<<<< HEAD
-/* import { AccountInformationComponent } from './main/account-information/account-information.component';
- */import { AccountInformationModule } from './main/account-information/account-information.module';
 
-=======
+import { AccountInformationModule } from './main/account-information/account-information.module';
+
+
 import { GetStartedModule} from 'app/main/get-started/get-started.module';
 import { UploadDirectoryHomeModule } from 'app/main/upload-directory-home/upload-directory-home.module';
->>>>>>> c0160f486e1fb01e624fdfac5b1ff035dd108993
+
 
 
 const appRoutes: Routes = [
@@ -76,12 +75,12 @@ const appRoutes: Routes = [
         ConciergeModule,
         IntegrationsModule,
         AccountSetupModule,
-<<<<<<< HEAD
-        AccountInformationModule
-=======
+
+        AccountInformationModule,
+
         GetStartedModule,
         UploadDirectoryHomeModule,
->>>>>>> c0160f486e1fb01e624fdfac5b1ff035dd108993
+
     ],
     bootstrap   : [
         AppComponent
