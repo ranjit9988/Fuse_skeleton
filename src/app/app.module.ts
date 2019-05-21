@@ -21,6 +21,8 @@ import { SampleModule } from 'app/main/sample/sample.module';
 import { ConciergeModule } from 'app/main/concierge/concierge.module';
 import { IntegrationsModule} from 'app/main/integrations/integrations.module';
 import { AccountSetupModule } from 'app/main/account-setup/account-setup.module';
+/* import { AccountInformationComponent } from './main/account-information/account-information.component';
+ */import { AccountInformationModule } from './main/account-information/account-information.module';
 
 
 
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     {
         path      : '**',
         redirectTo: 'sample'
-    },
+    }
+   
 
 
 ];
@@ -36,6 +39,7 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AppComponent,
+        
     
     ],
     imports     : [
@@ -67,6 +71,7 @@ const appRoutes: Routes = [
         ConciergeModule,
         IntegrationsModule,
         AccountSetupModule,
+        AccountInformationModule
     ],
     bootstrap   : [
         AppComponent
