@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AccountInformationComponent } from './account-information.component';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 const routes = [
     {
@@ -18,6 +20,8 @@ const routes = [
     CommonModule,
     BrowserModule,
     RouterModule.forChild(routes),
+    MatTabsModule,
+    MatExpansionModule
   ]
 })
 export class AccountInformationModule { }
