@@ -16,10 +16,14 @@
                     <!-- <img class="logo-icon" src="assets/images/logos/fuse.svg"> -->
                 </div>
             </div>
-
-            <div class="px-8 px-mat-16">
+<!-- 
+            <div class="px-8 px-mat-16"> -->
                 <fuse-shortcuts [navigation]="navigation"></fuse-shortcuts>
-            </div>
+
+                <button mat-button [matMenuTriggerFor]="menu" >Portfoloi</button>
+
+            <!-- </div> -->
+         
 
         </div>
 
@@ -27,7 +31,12 @@
            <!--      <button>
                     <mat-icon>settings_input_hdmi</mat-icon>
                 </button>     -->
-                
+                <mat-menu #menu="matMenu">
+                        <button mat-menu-item>Item 1</button>
+                        <button mat-menu-item>Item 2</button>
+                        <button mat-menu-item>Item 3</button>
+                        <button mat-menu-item>Item 4</button>
+                      </mat-menu>
             <button mat-button [matMenuTriggerFor]="userMenu"
                     class="user-button">
                 <div fxLayout="row" fxLayoutAlign="center center">
@@ -100,6 +109,10 @@
 
         </div>
 
+       
+
     </div>
 
 </mat-toolbar>
+
+

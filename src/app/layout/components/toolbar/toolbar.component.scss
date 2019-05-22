@@ -53,3 +53,56 @@
         }
     }
 }
+
+
+// .mat-menu-panel {
+//     // min-width: 100% !important;
+//     // max-width: 100% !important;
+//     margin-left: -8px;
+//     margin-top: 24px;
+//   }
+
+  @media (min-width: 576px) {
+    button.mat-menu-item {
+    width: 100%;
+    float: left;
+   }
+  }
+  
+  /* Medium devices (tablets, 768px and up)*/
+  @media (min-width: 768px) {
+    button.mat-menu-item {
+    width: 50%;
+    float: left;
+   }
+  }
+  
+  /* Large devices (desktops, 992px and up)*/
+  @media (min-width: 992px) {
+    button.mat-menu-item {
+    width: 33.333%;
+    float: left;
+   }
+  }
+  /* very large devices (large desktops, 1200px and up)*/
+  @media (min-width: 1200px) {
+    button.mat-menu-item {
+    width:25%;
+    float: left;
+   }
+  }
+  /* Extra large devices (large desktops, 1550px and up)*/
+  @media (min-width: 1550px) {
+    button.mat-menu-item {
+    width: 25%;
+    float: left;
+   }
+
+   .mat-menu-panel ng-trigger ng-trigger-transformMenu{
+       min-width: 95% !important;
+       max-width: 100% !important;
+
+   }
+ }
+
+
