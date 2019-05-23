@@ -1,5 +1,7 @@
-<a  routerLink = "/UploadLogo">Upload logo  </a>
-<div class="page-layout blank p-24" fusePerfectScrollbar >
+<div id="forms" class="page-layout simple fullwidth mat-card" fxLayout="column">
+<div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+
+<div class="page-layout blank p-24" fusePerfectScrollbar fxFlex="100">
   <h1 style="text-align: center">Add your Company Directory </h1>
  
  <h5 style="text-align: center"> Your Company Directory in Procore will serve as your main address book. It is used for inviting internal and external team members to your account</h5> 
@@ -8,26 +10,29 @@
   <a style="text-align: center; background-color: blue; color: white" type="button" color="accent" class="mat-raised-button" target="_self" href="../../../assets/Files/import_template_users_13889.xlsx" download="import_template_users_13889.xlsx">here</a>
 </div>
 </div>
+</div>
 
-  <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
-    <div class="center" fxFlex="100">
-      <file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
-        (onFileLeave)="fileLeave($event)">
-        <span></span>
-      </file-drop>
-      <div class="upload-table">
-        <table class="table">
+<div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto">
+<div class="center" fxFlex="100" >
+  <file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" 
+  (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+      <span>drop your Company Directory here</span>
+  </file-drop>
+  <div class="upload-table">
+      <table class="table">
           <thead>
-            <tr>
-              <th>Name</th>
-            </tr>
+              <tr>
+                  <th>Name</th>
+              </tr>
           </thead>
           <tbody class="upload-name-style">
-            <tr *ngFor="let item of files; let i=index">
-              <td><strong>{{ item.relativePath }}</strong></td>
-            </tr>
+              <tr *ngFor="let item of files; let i=index">
+                  <td><strong>{{ item.relativePath }}</strong></td>
+              </tr>
           </tbody>
-        </table>
-      </div>
-    </div>
+      </table>
   </div>
+</div>
+</div>
+
+</div>

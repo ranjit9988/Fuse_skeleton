@@ -5,6 +5,7 @@ import { MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, Mat
 import { FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { CommonModule } from '@angular/common';  
 import { BrowserModule } from '@angular/platform-browser';
+import { FileDropModule} from 'ngx-file-drop';
 
 const routes = [
   {
@@ -20,6 +21,7 @@ const routes = [
     RouterModule.forChild(routes),
     BrowserModule,
     ReactiveFormsModule,
+    FileDropModule,
     
   ],
   declarations: [
