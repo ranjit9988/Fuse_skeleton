@@ -63,7 +63,7 @@
 //   }
 
   @media (min-width: 576px) {
-    button.mat-menu-item {
+    button.Menuitem {
     width: 100%;
     float: left;
    }
@@ -71,7 +71,7 @@
   
   /* Medium devices (tablets, 768px and up)*/
   @media (min-width: 768px) {
-    button.mat-menu-item {
+    button.Menuitem {
     width: 50%;
     float: left;
    }
@@ -79,21 +79,21 @@
   
   /* Large devices (desktops, 992px and up)*/
   @media (min-width: 992px) {
-    button.mat-menu-item {
+    button.Menuitem {
     width: 33.333%;
     float: left;
    }
   }
   /* very large devices (large desktops, 1200px and up)*/
   @media (min-width: 1200px) {
-    button.mat-menu-item {
+    button.Menuitem {
     width:25%;
     float: left;
    }
   }
   /* Extra large devices (large desktops, 1550px and up)*/
   @media (min-width: 1550px) {
-    button.mat-menu-item {
+    button.Menuitem {
     width: 25%;
     float: left;
    }

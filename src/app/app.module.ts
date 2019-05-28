@@ -28,6 +28,7 @@ import { AccountInformationModule } from './main/account-information/account-inf
 import { GetStartedModule} from 'app/main/get-started/get-started.module';
 import { UploadDirectoryHomeModule } from 'app/main/upload-directory-home/upload-directory-home.module';
 import { UploadLogoModule} from 'app/main/upload-logo/upload-logo.module';
+import { Error404Module } from 'app/navigation/error404/error404.module';
 
 
 
@@ -44,8 +45,6 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AppComponent,
-        
-    
     ],
     imports     : [
         BrowserModule,
@@ -82,6 +81,7 @@ const appRoutes: Routes = [
         GetStartedModule,
         UploadDirectoryHomeModule,
         UploadLogoModule,
+        Error404Module
 
 
     ],
